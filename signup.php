@@ -1,31 +1,4 @@
-<?php
-// Set X-Frame-Options header to deny embedding in frames
-header("X-Frame-Options: DENY");
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
 
-$url = "login.php";
-session_set_cookie_params([
-    'lifetime' => 0, // or any other lifetime in seconds
-    'path' => '/', // or a specific path
-    'domain' => $_SERVER['HTTP_HOST'], // or your specific domain
-    'secure' => true, // true if you're serving over HTTPS, false otherwise
-    'httponly' => true, // true to make cookie accessible only through the HTTP protocol
-    'samesite' => 'Lax' // 'None', 'Lax', or 'Strict'
-]);
-session_start();
-
-if (isset($_SESSION["id"])) {
-    header("location: $url");
-    exit();
-}
-
-// Generate a CSRF token
-$csrfToken = bin2hex(random_bytes(16));
-$_SESSION["csrf_token"] = $csrfToken;
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
