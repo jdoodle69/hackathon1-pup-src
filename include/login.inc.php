@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
                     $_SESSION['userId'] = $row['usersId']; // Assuming you have a column 'usersId'
                     $_SESSION['userUid'] = $row['usersUid'];
                     $_SESSION['usersName'] = $row['usersName']; // Assuming you have a column 'usersName'
+                    $_SESSION['usertype'] = $row['usertype']; // Assuming you have a column 'usertype'
                     
                     // Check user type and redirect accordingly
                     if ($row['usertype'] == 'admin') {
