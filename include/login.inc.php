@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     require 'dbh.inc.php';
     $uid = $_POST['uid'];
     $pwd = $_POST['pwd'];
+    
     if (empty($uid) || empty($pwd)) {
         header("Location: ../login.php?error=emptyfields");
         exit();
@@ -23,8 +24,11 @@ if (isset($_POST['submit'])) {
                     header("Location: ../login.php?error=wrongpwd");
                     exit();
                 } else if ($pwdCheck == true) {
-                    $_SESSION['userId'] = $row['usersUid'];
-                    $_SESSION['userUid'] = $row['usersEmail'];
+                    // Set the session variables
+                    $_SESSION['userId'] = $row['usersId']; // Assuming you have a column 'usersId'
+                    $_SESSION['userUid'] = $row['usersUid'];
+                    $_SESSION['usersName'] = $row['usersName']; // Assuming you have a column 'usersName'
+                    
                     // Check user type and redirect accordingly
                     if ($row['usertype'] == 'admin') {
                         header("Location: ../admin_index.php?login=success");

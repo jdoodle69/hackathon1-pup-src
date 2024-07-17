@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'include/header.php';
 ?>
 
@@ -33,7 +34,13 @@ include 'include/header.php';
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title pup-red">Instructor Name</h4>
+                            <h4 class="card-title pup-red">
+                                <?php
+                                // Display the user's name from the session
+                                // htmlspecialchars is used to prevent XSS attacks
+                                echo isset($_SESSION['usersName']) ? htmlspecialchars($_SESSION['usersName']) : 'Instructor Name';
+                                ?>
+                            </h4>
                         </div>
                         <div class="card-body vh-100">
 
