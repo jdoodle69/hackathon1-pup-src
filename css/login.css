@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-holder {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 700;
+    height: 45px !important;
+    background-color: #800201!important;
+    color: #ffffff !important;
+}
+
+.btn i{
+    vertical-align: text-top;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.basoy{
+    background-image: url("media/pupbg.png") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    color: white !important;
+
+}
+
+@media (min-width: 992px) {
+    
+    .basoysmall{
+        display: none;
+    }
+}
+
+.basoy-logo {
+    width: 200px;
+    margin-top: 15vh !important;
+}
+
+.basoy-logo-small {
+    width: 100px;
+}
+
+.bx-user {
+    width: 17px;
+}
+
+.bx-bxs-lock-alt {
+    width: 17px;
+}
+
+.pup-red {
+    color: #800201;
+}
+

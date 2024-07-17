@@ -1,0 +1,224 @@
+:root{
+
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+.sidebar-nav{
+    width: var(--offcanvas-width);
+}
+
+.sidebar_text{
+    color: rgba(0, 37, 93, 1);
+}
+
+ul.no-bullets {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+  }
+
+li.no-bullets {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+  }
+@media (min-width:992px){
+    body{
+        overflow: auto !important;
+    }
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    .sidebar-nav{
+        -webkit-transform: none;
+        transform: none;
+        visibility: visible !important;
+        top:var(--topNavbarHeight);
+        height: calc(100% - var(--topNavbarHeight));
+    }
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+    .navbar-toggler {
+        display:none;
+    }
+   
+}
+
+body{
+background-image: linear-gradient(
+    0deg,
+    rgb(225, 225, 225),
+    rgb(241, 235, 235),
+);
+    
+}
+
+.card-top1 {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 10px !important;
+    background-image: linear-gradient(120deg,
+            rgb(13, 110, 253),
+            rgb(10, 82, 189));
+    border: 0px !important;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.card-top2 {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 10px !important;
+    background-image: linear-gradient(120deg,
+            rgb(0, 210, 91),
+            rgb(3, 187, 82));
+    border: 0px !important;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.card-top3 {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 10px !important;
+    background-image: linear-gradient(120deg,
+            rgb(246, 87, 103),
+            rgb(161, 39, 51));
+    border: 0px !important;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.card-top4 {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 10px !important;
+    background-image: linear-gradient(120deg,
+            rgb(225, 93, 7),
+            rgb(205, 85, 6));
+    border: 0px !important;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.card-top1:hover, .card-top2:hover, .card-top3:hover, .card-top4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-headerlow {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    background-image: linear-gradient(120deg,
+    rgb(13, 110, 253),
+    rgb(10, 82, 189));
+}
+
+.card-body {
+    border: 0px !important;
+}
+
+
+.nav {
+    background-color: transparent !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 0px !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    background-image: linear-gradient(120deg,
+    rgb(10, 82, 189),
+    rgb(10, 82, 189),
+            rgb(13, 110, 253),
+            rgb(57, 129, 238)) !important;
+
+}
+
+
+
+.offcanvas {
+    background-color: transparent !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 0px !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    background-image: linear-gradient(0deg,
+            rgb(56, 128, 237),
+            rgb(13, 110, 253),
+            rgb(10, 82, 189)) !important;
+}
+.log-out{
+    border-radius: 30px;
+    margin: 0% !important;
+}
+.log-out:hover {
+    background-color: rgb(161, 39, 51) !important;
+    transition: transform 0.3s ease;
+    border-radius: 30px;
+    margin: 0% !important;
+    padding: auto !important;
+}
+.nav-item {
+    color: #ffffff !important; /* White text */
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav-item i {
+    color: #ffffff !important; 
+    transition: color 0.3s !important; 
+}
+
+.nav-item:hover {
+    background-color: #ffffff; 
+    color: #006BE5 !important; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 2px;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.nav-item:hover i {
+    color: #006BE5 !important; /* Blue icons */
+}
+
+.active {
+    background-color: #ffffff; 
+    color: #006BE5 !important; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 2px;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.active i {
+    color: #006BE5 !important; 
+}
+
+.blue{
+    color: rgba(0, 37, 93, 1) !important; 
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+    border-radius: 10px !important;
+}
+
+.title{
+    background-color: #003572;
+    color: skyblue;
+    border-radius: 15px;
+}
+
+.icon-container {
+    display: inline-block;
+    width: 35px; /* Adjust based on your icon size for uniformity */
+    text-align: center;
+}
+
+.nav-link .fw-bold {
+    vertical-align: left; /* Aligns the text vertically to the middle of the icon */
+}
