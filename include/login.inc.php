@@ -2,10 +2,8 @@
 if (isset($_POST['submit'])) {
     session_start();
     require 'dbh.inc.php';
-
     $uid = $_POST['uid'];
     $pwd = $_POST['pwd'];
-
     if (empty($uid) || empty($pwd)) {
         header("Location: ../login.php?error=emptyfields");
         exit();
@@ -27,8 +25,18 @@ if (isset($_POST['submit'])) {
                 } else if ($pwdCheck == true) {
                     $_SESSION['userId'] = $row['usersUid'];
                     $_SESSION['userUid'] = $row['usersEmail'];
-                    header("Location: ../index.php?login=success");
-                    exit();
+                    // Check user type and redirect accordingly
+                    if ($row['usertype'] == 'admin') {
+                        header("Location: ../admin_index.php?login=success");
+                        exit();
+                    } else if ($row['usertype'] == 'professor') {
+                        header("Location: ../professor_index.php?login=success");
+                        exit();
+                    } else {
+                        // Handle other user types or errors
+                        header("Location: ../index.php?error=usertypeunknown");
+                        exit();
+                    }
                 } else {
                     header("Location: ../login.php?error=wrongpwd");
                     exit();
