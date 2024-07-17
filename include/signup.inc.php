@@ -3,11 +3,14 @@ session_start();
 
 require_once 'dbh.inc.php';
 
-$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName); // Ensure the correct variable names are used here
-// Check connection
+$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+$firstName = $_POST["FirstName"];
+$lastName = $_POST["LastName"];
+$name = $lastName . ", " . $firstName;
 
 if (isset($_POST["submit"])) {
     if (!isset($_POST["csrf_token"]) || $_POST["csrf_token"] !== $_SESSION["csrf_token"]) {
@@ -15,13 +18,11 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    $name = $_POST["Name"];
     $email = $_POST["Email"];
     $uid = $_POST["UID"];
     $pwd = $_POST["pwd"];
     $pwdrepeat = $_POST["pwdrepeat"];
 
-    // Validate input data
     if (empty($name) || empty($email) || empty($uid) || empty($pwd) || empty($pwdrepeat)) {
         header("location:../signup.php?error=emptyinput");
         exit();

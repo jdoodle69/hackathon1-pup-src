@@ -57,7 +57,13 @@ $csrfToken = $_SESSION['csrf_token'];
                             <span class="input-group-text">
                                 <i class='bx bx-user'></i>
                             </span>
-                            <input name="Name" type="text" class="form-control form-control-lg fs-5" placeholder="Name">
+                            <input name="FirstName" type="text" class="form-control form-control-lg fs-5" placeholder="First Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class='bx bx-user'></i>
+                            </span>
+                            <input name="LastName" type="text" class="form-control form-control-lg fs-5" placeholder="Last Name">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">
