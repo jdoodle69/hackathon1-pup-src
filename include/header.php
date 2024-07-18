@@ -1,4 +1,3 @@
-
 <body>
     <nav class="nav navbar navbar-light fixed-top" style="background-color:rgba(0, 107, 229, 1);">
         <div class="container-fluid">
@@ -21,7 +20,19 @@
                 <ul class="navbar-nav">
                     <img class="img-fluid mx-auto d-flex justify-content-center mb-3" src="css/media/puplogo.png" alt="logo" width="200px">
                     <li>
-                        <a href="<?php echo $dashboardUrl; ?>" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == basename($dashboardUrl)||basename($_SERVER['PHP_SELF']) == 'admin_index.php') ? 'active' : ''; ?>">
+                        <span class="fw-bold" style="color: red">
+                            <?php
+                            // Display user type based on the session variable
+                            if (isset($_SESSION['usertype'])) {
+                                echo $_SESSION['usertype'] === 'admin' ? 'Administrator' : 'Professor';
+                            } else {
+                                echo 'User';
+                            }
+                            ?>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="<?php echo $dashboardUrl; ?>" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == basename($dashboardUrl) || basename($_SERVER['PHP_SELF']) == 'admin_index.php') ? 'active' : ''; ?>">
                             <span class="icon-container"><i style="color: #ffff" class="fa-solid fa-house"></i></span>
                             <span class="fw-bold">Home</span>
                         </a>
