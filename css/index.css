@@ -488,9 +488,6 @@ background-color: gray !important;
     color: #800201;
 }
 
-.btn-custom {
-    width: 100px;
-    height: 60px;
-    white-space: normal;
-    text-align: center;
+.usertype  {
+    font-size: 24px !important;
 }

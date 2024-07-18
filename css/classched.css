@@ -1,0 +1,26 @@
+.table th, .table td {
+    padding: 20px; 
+    text-align: center; 
+
+}
+
+.table .course-1 th {
+    text-align: left;
+    font-size: 25px;
+    color: #5d8a0e;
+    border-bottom: none; 
+}
+
+.table .course-2 th {
+    text-align: left;
+    font-size: 25px;
+    color: #f7af13;
+    border-bottom: none; 
+}
+
+.table .course-3 th {
+    text-align: left;
+    font-size: 25px;
+    color: #8b0909;
+    border-bottom: none; 
+}
