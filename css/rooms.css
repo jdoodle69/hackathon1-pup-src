@@ -1,0 +1,188 @@
+:root {
+
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+    width: var(--offcanvas-width);
+}
+
+.sidebar_text {
+    color: rgba(0, 37, 93, 1);
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width:992px) {
+    body {
+        overflow: auto !important;
+    }
+
+    .offcanvas-backdrop::before {
+        display: none;
+    }
+
+    .sidebar-nav {
+        -webkit-transform: none;
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100% - var(--topNavbarHeight));
+    }
+
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+}
+
+body {
+    background-color: gray !important;
+
+}
+
+.card-body {
+    border: 0px !important;
+}
+
+
+.nav {
+    background-color: white !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 0px !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+
+
+}
+
+
+
+.offcanvas {
+    background-color: white !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 0px !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.log-out {
+    border-radius: 30px;
+    margin: 0% !important;
+}
+
+.log-out:hover {
+    color: #ffffff !important;
+    background-color: rgb(161, 39, 51) !important;
+    transition: transform 0.3s ease;
+    border-radius: 30px;
+    margin: 0% !important;
+    padding: auto !important;
+}
+
+.nav-item {
+    color: #800201 !important;
+    /* White text */
+    transition: background-color 0.2s, color 0.2s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* Smooth transition for background and text color */
+}
+
+.nav-item i {
+    color: #800201 !important;
+    transition: color 0.3s !important;
+
+}
+
+.nav-item:hover {
+    background-color: #800201;
+    color: #ffff !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 2px;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.nav-item:hover i {
+    color: #ffffff !important;
+    /* Blue icons */
+}
+
+.active {
+    background-color: #800201;
+    color: #ffffff !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 2px;
+    box-shadow: 0 4px 8px 0 rgba(47, 150, 219, 0.2), 0 4px 8px 0 rgba(4, 12, 18, 0.2);
+}
+
+.active i {
+    color: #ffffff !important;
+}
+
+
+
+.icon-container {
+    display: inline-block;
+    width: 35px;
+    /* Adjust based on your icon size for uniformity */
+    text-align: center;
+}
+
+.nav-link .fw-bold {
+    vertical-align: left;
+    /* Aligns the text vertically to the middle of the icon */
+}
+
+.pup-red {
+    color: #800201;
+}
+
+.btn-width {
+    width: 70px;
+    height: 60px;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.legend span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.available{
+    background-color: rgb(49, 231, 43);
+}
+
+.scheduled{
+    background-color: red;
+}
+
+.occupied{
+    background-color: rgb(249, 230, 16);
+}
+
+.cannot-occupied{
+    background-color: rgb(161, 161, 161);
+}

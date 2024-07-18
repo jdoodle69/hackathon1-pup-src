@@ -28,7 +28,7 @@
                     </li>
 
                     <li>
-                        <a href="orders.php" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == 'orders.php') ? 'active' : ''; ?>">
+                        <a href="rooms.php" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == 'orders.php') ? 'active' : ''; ?>">
                             <span class="icon-container"><i style="color: #ffff" class="fas fa-door-open"></i></span>
                             <span class="fw-bold">Rooms</span>
                         </a>

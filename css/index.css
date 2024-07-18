@@ -487,3 +487,10 @@ background-color: gray !important;
 .pup-red {
     color: #800201;
 }
+
+.btn-custom {
+    width: 100px;
+    height: 60px;
+    white-space: normal;
+    text-align: center;
+}
