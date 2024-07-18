@@ -35,7 +35,7 @@
                     </li>
 
                     <li>
-                        <a href="product.php" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == 'product.php') ? 'active' : ''; ?>">
+                        <a href="classschedule.php" class="nav-link px-3 white nav-item mb-2 <?php echo (basename($_SERVER['PHP_SELF']) == 'classschedule.php') ? 'active' : ''; ?>">
                             <span class="icon-container"><i style="color: #ffff" class="fa-solid fa-calendar-days"></i></span>
                             <span class="fw-bold ">Class Schedule</span>
                         </a>
