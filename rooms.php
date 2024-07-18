@@ -122,7 +122,7 @@ include 'include/header.php';
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body mt-2 mb-2  d-flex justify-content-center">
+                                <div class="modal-body mt-2 mb-2 d-flex justify-content-center">
                                     <p>Do you want to book this room?</p>
                                 </div>
                                 <div class="modal-footer d-flex justify-content-center border-0">
