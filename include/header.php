@@ -18,9 +18,9 @@
         <div class="offcanvas-body p-0">
             <nav class="navbar-light">
                 <ul class="navbar-nav">
-                    <img class="img-fluid mx-auto d-flex justify-content-center mb-3" src="css/media/puplogo.png" alt="logo" width="200px">
-                    <li>
-                        <span class="fw-bold" style="color: red">
+                    <img class="img-fluid mx-auto d-flex justify-content-center mb-3" src="css/media/esilid.png" alt="logo" width="200px">
+                    <li class="text-center mb-3">
+                        <span class="fw-bold pup-red usertype">
                             <?php
                             // Display user type based on the session variable
                             if (isset($_SESSION['usertype'])) {
